@@ -1,0 +1,590 @@
+/* 清楚默认样式，因为浏览器不同出现样式偏差，这里我们只去除最基本的，如果需要去除很详细的，百度 'reastcss' */
+* {
+  padding: 0;
+  margin: 0;
+}
+.page-container {
+  width: 100%;
+  min-width: 1450px;
+  /* display为block的水平居中方法(display为其他不行)，margin左右自定义  */
+  margin: 0 auto;
+  /* 为了美观加一个padding,如果为了保持页面宽度为1450px不变,那么可以设置box-sizing改变默认的盒模型 */
+  overflow: hidden;
+}
+
+/* header部分css */
+.page-header {
+  height: 90px;
+  /* 因为里面有元素用到绝对定位,所以要设置父级的position不为static所以一般设置为relative */
+  position: relative;
+}
+.logo {
+  height: 90px;
+  padding-left: 50px;
+}
+.logo img {
+  padding-top: 15px;
+  height: 60px;
+}
+.logo span {
+  font-size: 32px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 90px;
+  vertical-align: top;
+}
+.page-nav {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+.nav-item {
+  height: 90px;
+  line-height: 90px;
+  display: inline-block;
+  box-sizing: border-box;
+  /* css过渡,是的hover变得缓慢 */
+  transition: color,font-weight,border .3s;
+}
+.nav-item a {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #5b5454;
+}
+/* 加上一个css伪类hover => 鼠标放上去的效果 */
+.nav-item:hover,.active {
+  color: #000;
+  font-weight: bold;
+  /* 加一个下边框 */
+  border-bottom: 3px solid red;
+}
+
+/* 第二部分,cover封面 */
+.cover {
+  /* 这里的相对位置变成了当前这个css文件,不是index.html,所以注意相对路径的写法 */
+  background-image: url('../image/02.jpg');
+  /* 如果我们选择的图片太小了会默认,给我们平铺,就是用多张图片拼接,这样不好看,我们取消它 */
+  background-repeat: no-repeat;
+  /* 设置背景图片水平按照div宽度设置,高度自动 */
+  background-size: 100% auto;
+  /* 上面的三个属性,可以写在一个backhground属性下面 */
+  height: 700px;
+  color: #fff;
+  width: 100%;
+}
+.cover-wrap {
+  position: relative;
+  top: 180px;
+  left: 180px;
+}
+.cover-title {
+  font-size: 52px;
+  font-weight: bold;
+}
+.cover-subTitle {
+  font-size: 24px;
+  width: 360px;
+  margin: 20px 0;
+}
+.cover-btn {
+  width: 280px;
+  height: 50px;
+  background-color: #e7504e;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  /* 改变鼠标的样式为手心 */
+  cursor: pointer;
+}
+
+/* 第三部分css代码 */
+/* 这里我们用浮动来设置四个div共行的问题 */
+.third-part {
+  width: 100%;
+  /* 设置overflow,来清楚浮动,关于浮动的清楚还有其他的方法,大家可以百度了解一下 */
+  overflow: hidden;
+}
+.third-part-item {
+  /* 宽度1/4 */
+  width: 25%;
+  float: left;
+  text-align: center;
+  padding: 50px 0;
+}
+.third-part-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.third-part-describe {
+  padding: 0 100px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+
+/* 第四部分 */
+.fourth-part {
+  background-color: #eee;
+  text-align: center;
+  padding: 90px 0;
+}
+.fourth-part img {
+  width: 100px;
+  height: 100px;
+}
+.fourth-part-title {
+  font-size: 60px;
+  color: #9f9f9f;
+  font-weight: bolder;
+}
+
+/* 第五部分的css */
+.fifth-part {
+  background-image: url(../image/08.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 340px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: #aa3433;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.fifth-title {
+  font-size: 26px;
+  padding-top: 60px;
+}
+.fifth-part hr {
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  margin: 30px auto;
+}
+.fifth-subTitle {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.fifth-form-item {
+  display: inline-block;
+  width: 236px;
+  height: 36px;
+  border: none;
+  outline: none;
+  background-image: url(../image/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  padding-left: 15px;
+  /* 取消下拉选择框的箭头,这里下面四行是兼容浏览器写法 */
+  appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  -webkit-appearance: none;
+}
+.fifth-form-item + .fifth-form-item,.fifth-btn {
+  margin-left: 30px;
+}
+.fifth-btn {
+  background-color: #be4e48;
+  width: 236px;
+  height: 36px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+/* 第六部分css */
+.sixth-part {
+  padding: 50px 150px;
+  overflow: hidden;
+}
+.sixth-part-item {
+  width: 25%;
+  float: left;
+  height: 380px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  text-align: center;
+}
+.top .sixth-part-title {
+  letter-spacing: 30px;
+}
+.sixth-part-bg {
+  background-image: url(../image/15.png);
+  height: 312px;
+  width: 204px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+.sixth-part-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.sixth-part-subtitle {
+  font-size: 14px;
+  color: #9E9D9D;
+  margin-bottom: 10px;
+}
+/* 对背景图片,雪碧图进行分割 */
+.sixth-part-2 {
+  background-position: -254px -52px;
+}
+.sixth-part-3 {
+  background-position: -512px;
+}
+.sixth-part-4 {
+  background-position: -765px;
+}
+
+/* 第七部分css */
+.seventh-part {
+  /* 设置flex布局 垂直居中 */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.seventh-part-left {
+  flex-grow: 2;
+  background-image: url(../image/13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+/* 这里用伪类元素来模拟三角形 */
+.seventh-part-left::after {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #fff;
+  /* 旋转 */
+  transform: rotateZ(90deg);
+  content: "";
+  width: 0;
+}
+.seventh-left-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+.seventh-left-p1 {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.seventh-left-p2 {
+  font-size: 200px;
+  line-height: 1.2;
+}
+.seventh-left-p3 {
+  font-size: 22px;
+}
+.seventh-part-right {
+  flex-grow: 1;
+  max-width: 33.3%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.sevent-right-title {
+  font-size: 36px;
+}
+.sevent-right-title span {
+  color: red;
+}
+.senent-right-p1 {
+  color: #cbadad;
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.8;
+}
+.senent-right-btn {
+  width: 160px;
+  height: 52px;
+  color: #d50d13;
+  border: 1px solid #d50d13;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px 0;
+  cursor: pointer;
+  outline: none;
+  transition: color,background .6s;
+}
+.senent-right-btn:hover {
+  color: #fff;
+  background-color: #d50d13;
+}
+.spot-list {
+  text-align: center;
+}
+.spot-item {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border: 1px solid #919191;
+  border-radius: 50%;
+}
+.spot-item + .spot-item {
+  margin-left: 20px;
+}
+.spot-list .active {
+  background-color: #919191;
+}
+/* 第八部分的css */
+.eighth-part {
+  display: flex;
+  height: 700px;
+}
+.eighth-part-item {
+  flex-grow: 1;
+  max-width: 33.3%;
+  background-color: #e7504e;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 180px;
+  color: #fff;
+}
+.eighth-part-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+.eight-part-hr {
+  width: 50px;
+  margin: 36px auto;
+}
+.eighth-part-btn {
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.eighth-part-btn:hover {
+  animation:  rotate .6s;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.eight-part-item2 {
+  background-color: #fff;
+  color: #666;
+}
+.eight-part-item2 .eighth-part-btn {
+  color: #e7504e;
+  border-color: #e7504e;
+}
+.eight-part-item3 {
+  background-image: url(../image/14.jpg);
+  background-size: cover;
+  position: relative;
+}
+/* 三角形 */
+.eight-part-item3::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-left: 30px solid #fff;
+  border-right: 20px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  content: "";
+  width: 0;
+}
+/* 第九部分的css */
+.ninth-part {
+  padding: 40px 140px;
+}
+.ninth-part-header {
+  padding: 80px 260px 50px;
+  text-align: center;
+}
+.ninth-part-title {
+  font-size: 32px;
+  color: #666;
+  font-weight: bold;
+}
+.ninth-part-hr {
+  width: 80px;
+  border-color: #e7504e;
+  margin: 20px auto;
+}
+.ninth-part-describe {
+  color: #777;
+}
+.ninth-part-main {
+  position: relative;
+}
+.ninth-part-left {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ninth-left-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+.ninth-left-item-title {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #666;
+}
+.ninth-left-item-content {
+  color: #777;
+  font-size: 16px;
+  line-height: 26px;
+  height: 52px;
+  position:relative;  
+  overflow:hidden;
+}
+.ninth-left-item-content::after {
+  content:"......";
+  font-weight:bold;
+  position:absolute;
+  bottom:0;
+  right:0;
+  padding: 1px 10px;
+  background-color: #fff;
+}
+.more {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  color: #777;
+}
+
+.ninth-part-right {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 450px;
+}
+.ninth-form-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ninth-form-item>* {
+  background-color: #EDEDEF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}
+.ninth-form-item input {
+  width: 350px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px; 
+  padding-left: 10px;
+  transition: border .24s;
+}
+.ninth-form-item input + input {
+  margin-left: 15px;
+}
+.ninth-form-item input:focus {
+  border-bottom: 1px dotted #e7504e;
+}
+.ninth-form-item textarea {
+  width: 100%;
+  height: 240px;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: none;
+}
+.ninth-form-submit {
+  width: 100%;
+  height: 40px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* 第十部分css */
+.tenth-part {
+  background-color: #33363F;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 50px 0;
+  height: 200px;
+}
+.tenth-part-wrap{
+  position: absolute;
+  width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.tenth-part-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.tenth-part-subtitle {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.tenth-input {
+  box-sizing: border-box;
+  width: 600px;
+  height: 50px;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+.tenth-submit {
+  height: 51px;
+  width: 120px;
+  margin-left: -10px;
+  vertical-align: bottom;
+  background-color: #717178;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+}
+
+/* 第十一部分 */
+footer {
+  background-color: #30303A;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+footer .time {
+  font-size: 14px;
+  color: red;
+}

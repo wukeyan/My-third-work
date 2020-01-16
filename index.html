@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第三次作业 by: pawn</title>
+  <link rel="shortcut icon" href="./image/06.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <!-- 定义一个居中容器，最小宽度为1450px -->
+  <div class="page-container">
+    <!-- 第一部分： 页面导航，header为语义化标签，也可以用div标签代替 -->
+    <header class="page-header">
+      <!-- 左边logo -->
+      <div class="logo">
+        <!-- img标签的alt属性养成喜欢加上 -->
+        <img src="./image/01.jpg" alt="logo">
+        <span>新世界</span>
+      </div>
+      <!-- 右边导航，同样nav为语义化标签，也可以用div标签代替 -->
+      <nav class="page-nav">
+        <!-- 用li标签来设置样式位置,a标签来导向链接,以前我个人总是喜欢只用li标签,这是不对的 -->
+        <!-- href为#就在当前页面url后面添加个#不跳转 -->
+        <li class="nav-item active"><a href="#">首页</a></li>
+        <!-- href为javascript:void(0);页面不跳转.这里才用javascript的方法 -->
+        <li class="nav-item"><a href="javascript:void(0);">最新活动</a></li>
+        <!-- 链接本地html页面 -->
+        <li class="nav-item"><a href="./index.html">项目介绍</a></li>
+        <!-- 链接百度官网 -->
+        <li class="nav-item"><a href="https://www.baidu.com">爱心社区</a></li>
+        <!-- target="_blank" 在新窗口打开 -->
+        <li class="nav-item"><a href="https://www.baidu.com" target="_blank">关于我们</a></li>
+        <li class="nav-item"><a href="javascript:void(0);" >登录</a></li>
+      </nav>
+    </header>
+    <!-- 第二部分: 页面封面 -->
+    <div class="cover">
+      <!-- 因为这部分会整体出现移动,所以我们用一个div包裹 -->
+      <div class="cover-wrap">
+        <p class="cover-title">Time of new life</p>
+        <p class="cover-subTitle">新时代,年轻的人们让我们一起体验新生活,享受新生活</p>
+        <button class="cover-btn">开始体验</button>
+      </div>
+    </div>
+    <!-- 第三部分: 四个div共行 这里用浮动 -->
+    <div class="third-part">
+      <div class="third-part-item">
+        <!-- 这里我们用图片,正常情况页面图标,我们会用icon来做,可以参考阿里矢量图标库 -->
+        <img src="./image/03.jpg" alt="icon">
+        <!-- 这里巧用行列css样式,来清除设置的border -->
+        <p class="third-part-describe" style="border:none;">打造全新世界观,让你更爱你的生活</p>
+      </div>
+      <div class="third-part-item">
+        <img src="./image/04.jpg" alt="icon">
+        <p class="third-part-describe">打造全新世界观,让你更爱你的生活</p>
+      </div>
+      <div class="third-part-item">
+        <img src="./image/05.jpg" alt="icon">
+        <p class="third-part-describe">打造全新世界观,让你更爱你的生活</p>
+      </div>
+      <div class="third-part-item">
+        <img src="./image/06.jpg" alt="icon">
+        <p class="third-part-describe">打造全新世界观,让你更爱你的生活</p>
+      </div>
+    </div>
+    <!-- 第四部分:  -->
+    <div class="fourth-part">
+      <img src="./image/07.png" alt="icon">
+      <p class="fourth-part-title">关于新世界,你不知道的还有什么?</p>
+    </div>
+    <!-- 第五部分 -->
+    <div class="fifth-part">
+      <div class="layer"></div>
+      <p class="fifth-title">查找新世界城市活动信息</p>
+      <hr/>
+      <p class="fifth-subTitle">每个城市都有不同的活动信息,请自主查询你所需要了解的城市</p>
+      <div class="fifth-form">
+        <select class="fifth-form-item">
+          <option>国家</option>
+          <option>中国</option>
+          <option>美国</option>
+          <option>中国</option>
+        </select>
+        <select class="fifth-form-item">
+          <option>省份</option>
+          <option>四川</option>
+          <option>重庆</option>
+          <option>北京</option>
+        </select>
+        <select class="fifth-form-item">
+          <option>城市</option>
+          <option>成都</option>
+          <option>宜宾</option>
+          <option>泸州</option>
+        </select>
+        <button class="fifth-btn">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
+      </div>
+    </div>
+    <!-- 第六部分: 四个div同行 -->
+    <div class="sixth-part">
+      <div class="sixth-part-item">
+        <!-- 这里图片才用雪碧图,需要用代码分割 -->
+        <div class="sixth-part-bg sixth-part-1"></div>
+        <div class="sixth-part-info">
+          <p class="sixth-part-title">北京活动</p>
+          <p class="sixth-part-subtitle">新社区大联盟</p>
+        </div>
+      </div>
+      <div class="sixth-part-item">
+        <div class="sixth-part-info top">
+          <p class="sixth-part-title">上海活动</p>
+          <p class="sixth-part-subtitle">新社区大联盟</p>
+        </div>
+        <div class="sixth-part-bg sixth-part-2"></div>
+      </div>
+      <div class="sixth-part-item">
+        <div class="sixth-part-bg sixth-part-3"></div>
+        <div class="sixth-part-info">
+          <p class="sixth-part-title">北京活动</p>
+          <p class="sixth-part-subtitle">新社区大联盟</p>
+        </div>
+      </div>
+      <div class="sixth-part-item">
+        <div class="sixth-part-bg sixth-part-4"></div>
+        <div class="sixth-part-info">
+          <p class="sixth-part-title">北京活动</p>
+          <p class="sixth-part-subtitle">新社区大联盟</p>
+        </div>
+      </div>
+    </div>
+    <!-- 第七部分 flex共行 2个盒子2:1-->
+    <div class="seventh-part">
+      <div class="seventh-part-left">
+        <!-- 这里要水平垂直居中 -->
+        <div class="seventh-left-wrap">
+          <p class="seventh-left-p1">新世界</p>
+          <p class="seventh-left-p2">TIME</p>
+          <p class="seventh-left-p3">@科创室-web前端</p>
+          <p class="seventh-left-p3">2018.10.28</p>
+        </div>
+        <!--  这里用伪类元素来模拟三角形  -->
+      </div>
+      <div class="seventh-part-right">
+        <p class="sevent-right-title">新世界/<span>01</span></p>
+        <p class="senent-right-p1">新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界</p>
+        <button class="senent-right-btn">更多详情</button>
+        <ul class="spot-list">
+          <li class="spot-item active"></li>
+          <li class="spot-item"></li>
+          <li class="spot-item"></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 第八部分 flex 3个盒子共行 1:1:1 -->
+    <div class="eighth-part">
+      <div class="eighth-part-item eight-part-item1">
+        <p class="eighth-part-title">新时代</p>
+        <p class="eighth-part-title">关于爱生活的我们</p>
+        <hr class="eight-part-hr"/>
+        <button class="eighth-part-btn">查看更多</button>
+      </div>
+      <div class="eighth-part-item eight-part-item2">
+        <p class="eighth-part-title">新时代</p>
+        <p class="eighth-part-title">关于爱生活的我们</p>
+        <hr class="eight-part-hr"/>
+        <button class="eighth-part-btn">查看更多</button>
+      </div>
+      <div class="eighth-part-item eight-part-item3">
+      </div>
+    </div>
+    <!-- 第九部分 表单 -->
+    <div class="ninth-part">
+      <div class="ninth-part-header">
+        <p class="ninth-part-title">成为我们的志愿者</p>
+        <hr class="ninth-part-hr"/>
+        <p class="ninth-part-describe">新世界的大家需要每一个爱生活的人加入,如果你够年轻,有梦想,有激情那就不要犹豫,快来加入我们成为改变所有人的人</p>
+      </div>
+      <!-- 这里用左边定宽,右边自适应来实现 -->
+      <div class="ninth-part-main">
+        <div class="ninth-part-left">
+          <div class="ninth-left-item">
+            <p class="ninth-left-item-title">新世界志愿者协议</p>
+            <p class="ninth-left-item-content">加入新加入新世界志愿者的人员必须遵守中华人民共和国的相关法律发世界志愿者的人员必须遵守中华人民共和国的相关法律发,并且本着平等资源的原则字字字字字字</p>
+            <span class="more">^more</span>
+          </div>
+          <div class="ninth-left-item">
+            <p class="ninth-left-item-title">新世界志愿者协议</p>
+            <p class="ninth-left-item-content">加入新世界志愿者的人员必须遵守中华人民共和国的相关法律发,并且本着平等资源的原则字字字字字字</p>
+            <span class="more">^more</span>
+          </div>
+          <div class="ninth-left-item">
+            <p class="ninth-left-item-title">更多条款</p>
+            <span class="more">^more</span>
+          </div>
+        </div>
+        <div class="ninth-part-right">
+          <div class="ninth-form-item">
+            <input type="text" placeholder="姓名">
+            <input type="text" placeholder="年龄">
+          </div>
+          <div class="ninth-form-item">
+            <input type="text" placeholder="联系方式">
+            <input type="text" placeholder="联系地址">
+          </div>
+          <div class="ninth-form-item">
+            <textarea placeholder="请简单描述你梦想的生活"></textarea>
+          </div>
+          <div class="ninth-form-item">
+            <button class="ninth-form-submit">提交申请</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第十部分 -->
+    <div class="tenth-part">
+      <div class="tenth-part-wrap">
+        <p class="tenth-part-title">联系我们</p>
+        <p class="tenth-part-subtitle">为了更好的获取我们最新的产品咨询,你可以留下您的电子邮箱快速订阅我们的产品资讯也可以通过以下任何联系方式关注我们动态</p>
+        <div>
+          <input class="tenth-input" type="text" placeholder="someone@email.com">
+          <button class="tenth-submit">提交</button>
+        </div>
+      </div>
+    </div>
+    <!-- 第十一部分: footer -->
+    <footer>
+      <p>科创室WEB前端学长课堂2018年秋 => 作业(3) By : Pawn <span class="time">2018.10.28</span></p>
+    </footer>
+  </div>
+</body>
+</html>
